@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BROSEO BUSINESS STUDIO</title>
+  <meta name="description" content="BROSEO Business Studio — Websites, digital presence, and project showcase.">
+  <meta name="theme-color" content="#171717">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preload" href="assets/images/hero/broseo-hero-cutout.png" as="image">
+
+  <!-- Local Fonts (Offline-reliable Inter + IBM Plex Mono) -->
+  <link rel="preload" href="assets/fonts/inter-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Reference Display & Monospace Fonts (Oswald + Inter + Geist Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@200;300;400;500&family=Inter:wght@200;300;400;500&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- =====================================================================
+       STICKY HEADER (3-COLUMN RAIL ALIGNMENT)
+       ===================================================================== -->
+  <header class="site-header" id="site-header">
+    <a href="#hero" class="header-wordmark site-header-brand" id="site-header-brand" aria-label="BROSEO — Home">
+      <img class="brand-logo-mark" src="assets/icons/broseo-logo-dark.svg" alt="" width="33" height="38" aria-hidden="true">
+      <span>BROSEO</span>
+    </a>
+
+    <div class="site-header-grid">
+      <div class="site-header-left"></div>
+
+      <div class="site-header-center">
+        <button
+          type="button"
+          class="menu-toggle mobile-header-menu"
+          data-menu-open
+          aria-expanded="false"
+          aria-controls="menu-overlay"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+      </div>
+
+      <div class="site-header-right">
+        <button
+          type="button"
+          class="menu-toggle"
+          data-menu-open
+          aria-expanded="false"
+          aria-controls="menu-overlay"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+          <span class="menu-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       FULL-SCREEN NAVIGATION OVERLAY
+       ===================================================================== -->
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site navigation">
+    <div class="menu-overlay-top">
+      <button type="button" class="menu-close" id="menu-close" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <div class="menu-overlay-body">
+      <nav class="menu-overlay-nav" aria-label="Primary sections">
+        <ul class="menu-nav-list">
+          <li><a href="#hero" class="menu-nav-link" data-menu-link><span>01 // Home</span><span>&rarr;</span></a></li>
+          <li><a href="#about" class="menu-nav-link" data-menu-link><span>02 // About</span><span>&rarr;</span></a></li>
+          <li><a href="#services" class="menu-nav-link" data-menu-link><span>03 // Services</span><span>&rarr;</span></a></li>
+          <li><a href="#work" class="menu-nav-link" data-menu-link><span>04 // Previous Work</span><span>&rarr;</span></a></li>
+          <li><a href="#engagement" class="menu-nav-link" data-menu-link><span>05 // Engagement</span><span>&rarr;</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-overlay-brand-slot" aria-hidden="true"></div>
+
+      <div class="menu-overlay-preview" aria-hidden="true">
+        <img src="assets/images/work/karur-interiors.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="menu-overlay-bottom">
+      <span>HOMEPAGE V1</span>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===================================================================
+         1. HERO SECTION (WHITE CANVAS + ISOLATED SUBJECTS + DUAL-SPEED SCROLL)
+         =================================================================== -->
+    <section id="hero" class="rail-band rail-band--light hero-section" data-section-label="// HERO" aria-label="Hero">
+      <div class="rail-grid hero-grid">
+        <div class="rail-left hero-rail-left">
+          <div class="hero-rail-fade">
+            <a href="#hero" class="hero-brand-lockup" aria-label="BROSEO — Home">
+              <img class="hero-brand-logo" src="assets/icons/broseo-logo-light.svg" alt="" width="34" height="39" aria-hidden="true">
+              <span class="hero-brand-name">BROSEO</span>
+            </a>
+          </div>
+
+          <nav class="hero-rail-links hero-rail-fade" aria-label="Section shortcuts">
+            <a href="#about" class="hero-rail-link"><span>// About</span></a>
+            <a href="#services" class="hero-rail-link"><span>// Services</span></a>
+            <a href="#work" class="hero-rail-link"><span>// Work</span></a>
+            <a href="#engagement" class="hero-rail-link"><span>// Engagement</span></a>
+          </nav>
+        </div>
+
+        <div class="rail-center hero-center">
+          <div class="hero-top-meta hero-rail-fade">
+            <span id="studio-clock">IST &mdash;</span>
+          </div>
+
+          <div class="hero-portrait-stage">
+            <div class="hero-portrait-frame" data-hero-parallax>
+              <div class="hero-portrait-clip">
+                <img
+                  class="hero-portrait-img"
+                  src="assets/images/hero/broseo-hero-cutout.png"
+                  alt="BROSEO Business Studio founders"
+                  width="764"
+                  height="1024"
+                  fetchpriority="high"
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-mobile-footer hero-rail-fade">
+            <a href="#engagement" class="pill-btn pill-btn--dark">
+              <span class="pill-btn-mask">
+                <span class="pill-btn-track">
+                  <span>Start a Project</span>
+                  <span>Start a Project</span>
+                </span>
+              </span>
+              <span class="pill-btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#about" class="hero-scroll-cue">Scroll &darr;</a>
+          </div>
+        </div>
+
+        <div class="rail-right hero-rail-right">
+          <div class="hero-rail-fade">
+            <a href="#engagement" class="pill-btn pill-btn--dark">
+              <span class="pill-btn-mask">
+                <span class="pill-btn-track">
+                  <span>Start a Project</span>
+                  <span>Start a Project</span>
+                </span>
+              </span>
+              <span class="pill-btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <a href="#about" class="hero-scroll-cue hero-rail-fade">Scroll &darr;</a>
+        </div>
+      </div>
+
+      <!-- Overlapping Dual-Speed Mix-Blend Wordmark -->
+      <div class="hero-wordmark">
+        <div class="hero-wordmark-motion" data-wordmark-parallax>
+          <h1 class="hero-wordmark-heading">
+            <svg
+              class="hero-wordmark-img"
+              viewBox="0 0 1412 204"
+              width="1412"
+              height="204"
+              role="img"
+              aria-label="BROSEO"
+              focusable="false"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M596.5 8L617 7.9Q637.5 7.79 643.25 9.5Q649 11.21 654.14 11.85Q659.27 12.5 664.89 14.5Q670.5 16.49 674.2 18.75Q677.9 21 682.45 24.74Q687 28.48 691 33.68Q695 38.87 696.85 42.69Q698.7 46.5 701 53.5Q703.3 60.5 704.7 75.25Q706.11 90 706.11 105.75Q706.11 121.5 704.87 131.75Q703.63 142 701.07 149.94Q698.5 157.88 694.66 164.44Q690.81 171 684.41 176.87Q678 182.73 674.25 185.01Q670.5 187.29 666 188.92Q661.5 190.55 650.5 193.13Q639.5 195.72 620.5 195.6L546 195.6L535.23 193.3Q524.46 191 519 189Q513.53 187 507.42 182.75Q501.3 178.5 497.02 174.25Q492.75 170 488.71 162.5Q484.67 155 483.82 151Q482.97 147 481.51 143.75Q480.05 140.5 479.45 130.5Q478.85 120.5 478.85 99Q478.85 77.5 479.6 69.5Q480.34 61.5 482.64 54.75Q484.94 48 488.72 40.93Q492.5 33.86 494.75 31.23Q497 28.59 505.5 22.4Q514 16.21 546 8L596.5 8ZM844.5 7.53L865.5 7.9Q886.5 8.26 925.5 13.17L926.99 18L925.77 20.5Q924.55 23 918.73 50L916.11 50.82Q913.5 51.63 877.5 48.48L793.02 48.48L789.51 49.09Q786 49.69 783.05 51.35Q780.09 53 778.38 56.25Q776.66 59.5 777.29 68.5L780.19 71.75Q783.1 75 796.5 78.97L884.5 84.6L894.23 86.55Q903.95 88.5 911.73 92.47Q919.5 96.44 923.35 100.22Q927.2 104 928.93 106.75Q930.65 109.5 932.8 117.5Q934.95 125.5 934.95 139.25Q934.95 153 932.98 159.73Q931 166.47 929.13 170.23Q927.26 174 923.13 178.34Q919 182.68 916.07 184.84Q913.14 187 907.82 189.12Q902.5 191.23 893.75 193.59Q885 195.94 861 195.91L786 195.53L777.25 195.53Q768.5 195.53 732.15 190.5L731.35 188.5Q730.56 186.5 731.42 179.75Q732.29 173 733.69 167.5Q735.1 162 735.96 153.5L738 151.4L801.5 155.41L862 155.41L869.5 154.57Q877 153.72 880 152.38Q883 151.03 884.7 148.76Q886.41 146.5 886.96 143Q887.51 139.5 886.88 133L884.87 130.75Q882.86 128.5 878.68 126.61Q874.5 124.71 853.5 122.73Q832.5 120.74 813.25 119.85Q794 118.96 780.25 117.1Q766.5 115.24 764.25 113.94Q762 112.65 758.37 111.83Q754.73 111 750.12 108.91Q745.5 106.81 741 102.57Q736.5 98.33 734.29 94.16Q732.08 90 730.27 82Q728.46 74 728.46 63.75Q728.46 53.5 730.58 45.25Q732.71 37 734.77 33Q736.83 29 740.92 24.75Q745 20.51 748.25 18.4Q751.5 16.29 756.25 14.48Q761 12.66 784 7.53L844.5 7.53ZM1292 7.91L1313.13 7.81Q1334.26 7.71 1345.63 10.16Q1357 12.62 1362.25 14.47Q1367.5 16.32 1371 18.49Q1374.5 20.65 1379.13 24.58Q1383.76 28.5 1387.44 32.75Q1391.13 37 1393.26 40.75Q1395.4 44.5 1397.27 50Q1399.13 55.5 1401.11 66.25Q1403.08 77 1403.19 82.5Q1403.29 88 1403.29 108.25Q1403.29 128.5 1401.23 138.25Q1399.18 148 1396.88 154.5Q1394.58 161 1392.81 164Q1391.05 167 1387.26 171.25Q1383.48 175.5 1375.99 181.15Q1368.5 186.81 1363 188.9Q1357.5 190.99 1348.41 193.27Q1339.31 195.55 1307 195.59L1246 195.59L1234 193.36Q1222 191.14 1216.75 189.27Q1211.5 187.4 1205.25 183.1Q1199 178.8 1193.75 173.07Q1188.5 167.34 1185.6 160.42Q1182.71 153.5 1181.53 152Q1180.35 150.5 1178.71 144Q1177.06 137.5 1175.93 122L1175.93 77L1176.32 72.5Q1176.71 68 1178.52 60Q1180.33 52 1184.4 44.25Q1188.47 36.5 1190.29 34.25Q1192.1 32 1198.34 26.25Q1204.59 20.5 1208.54 18.25Q1212.5 16.01 1218.25 14.03Q1224 12.05 1229.5 11.45Q1235 10.84 1245 7.91L1292 7.91ZM250.5 8.7L389.5 8.7L402.69 10.6Q415.87 12.5 421.69 14.42Q427.5 16.35 433.75 20.64Q440 24.93 443.5 28.94Q447 32.95 449 36.44Q451 39.93 453.22 46.71Q455.43 53.5 455.29 63.5Q455.14 73.5 455.14 83.25Q455.14 93 453.07 99.36Q451 105.72 446.54 112.11Q442.08 118.5 436.29 122.8Q430.5 127.1 423.39 129.55Q416.28 132 414.42 134L420.24 143L457.89 189.5L459.65 192.5L459.42 194.5L457 195.19L404.37 195.19L396.19 187.5L358 136.37L349.5 135.19L299 135.19L296.5 135.96L295.54 138.5L295.54 189L294.31 194L290.9 194.47Q287.5 194.93 248.5 194.93L247.11 189.5L247.11 95.5L248.6 88.5L260.3 83.76Q272 79.02 274 77.59Q276 76.16 293 70.26L295.53 73L295.53 82.5Q295.53 92 296.5 94.49L298 95.19L391.5 95.19L402.62 90L404.64 86Q406.67 82 407.03 76Q407.39 70 406.96 66.25Q406.53 62.5 404.82 59.5Q403.1 56.5 400.55 54.46Q398 52.43 390 51.07L249.5 51.07L248 49.5L247.66 47.5Q247.32 45.5 247.32 30Q247.32 14.5 248.04 10L250.5 8.7ZM15 8.85L158 8.85L170 10.76Q182 12.67 186.85 14.33Q191.71 16 195.1 18.32Q198.5 20.63 202.72 24.82Q206.94 29 208.93 32.75Q210.93 36.5 213.11 46Q215.29 55.5 215.1 61.25Q214.92 67 212.91 74.25Q210.89 81.5 208.95 84.85Q207 88.2 203.23 91.85Q199.46 95.5 198.27 98L204.73 102.75Q211.2 107.5 214.99 112.75Q218.79 118 220.41 129.5Q222.03 141 220.63 152.75Q219.24 164.5 216.96 168.75Q214.69 173 212.65 175.5Q210.62 178 208.31 180.29Q206 182.58 202.5 184.8Q199 187.02 194.25 188.84Q189.5 190.67 165.06 195.2L15 195.2L11 194.16L8.94 189.5L8.94 15L11.01 10L15 8.85ZM966.5 8.76L1149.5 8.76L1150.62 9.63Q1151.74 10.5 1152.52 12.5Q1153.3 14.5 1153.3 30.25Q1153.3 46 1151.5 50.09L1148.5 51.07L965.5 51.07L964.35 50.29Q963.19 49.5 962.23 47.5Q961.26 45.5 961.26 30Q961.26 14.5 963 10.01L966.5 8.76ZM149 49.13L153.5 50.11Q158 51.08 162 53.24L166.11 64.5L164.31 70.75Q162.5 77.01 161.02 78.25Q159.54 79.5 156.52 80.87Q153.5 82.24 141 82.65L62.5 82.65L59.24 82L57.19 79.33L57.19 66.67Q57.19 54 58 51.36L60.86 49.13L149 49.13ZM604.5 49.22L613 49.09Q621.5 48.95 630 50.54Q638.5 52.14 642.5 54.39Q646.5 56.65 648.76 59.32Q651.02 62 653.42 67.5Q655.82 73 655.75 81.75Q655.67 90.5 655.67 110Q655.67 129.5 653.29 135.5Q650.9 141.5 648.7 144.03Q646.5 146.55 642.92 148.78Q639.35 151 622.5 154.7L562 154.7L552.92 152.85Q543.83 151 540.28 148.5Q536.73 146 534.62 143.01Q532.5 140.01 530.04 134.51Q527.58 129 527.62 120Q527.66 111 527.66 94.25Q527.66 77.5 528.08 75.22Q528.5 72.94 530.6 68.22Q532.71 63.5 535.8 60.25Q538.89 57 542.14 54.75Q545.38 52.5 558.97 49.22L604.5 49.22ZM1308.5 48.98L1317.75 49.68Q1327 50.37 1332.25 51.48Q1337.5 52.58 1342.25 56.45Q1347 60.31 1348.82 63.41Q1350.63 66.5 1352.57 79.75Q1354.51 93 1354.51 102Q1354.51 111 1352.76 122.65Q1351 134.29 1349 138.36Q1347 142.43 1344.78 144.72Q1342.55 147 1339.28 149.12Q1336 151.25 1318 154.46L1258 154.46L1249.5 152.77Q1241 151.08 1238.25 148.84Q1235.5 146.59 1232.1 142.3Q1228.7 138 1224.7 125.5L1224.7 79L1226.6 71.95Q1228.5 64.9 1232 60.82Q1235.5 56.74 1239.25 54.43Q1243 52.12 1262.5 48.98L1308.5 48.98ZM1007 64.76L1010.44 66.5L1010.44 73Q1010.44 79.5 1012 81.98L1014 82.73L1125 82.73L1130.44 84L1130.97 86Q1131.51 88 1131.51 102.25Q1131.51 116.5 1130 120.08L1013 120.08L1010.84 122L1010.53 123.5Q1010.23 125 1010.23 137.5Q1010.23 150 1012.35 153.5L1015.5 154.24L1153.5 154.24L1155.16 155.5L1155.55 157Q1155.95 158.5 1155.95 174Q1155.95 189.5 1155.03 194.5L1152.5 195.36L967 195.36L962.71 194L961.2 189L961.2 89L962.85 86.59Q964.5 84.19 970.81 81.59Q977.12 79 979.06 77.61Q981 76.21 988.25 73.58Q995.5 70.94 1007 64.76ZM63 118.2L145.5 118.2L154.59 119.1Q163.68 120 171.52 126L172.35 130.75Q173.18 135.5 172.45 140.5Q171.71 145.5 169.36 148.39Q167 151.28 157.5 154.63L60 154.63L58 153.39L57.43 151.89Q56.85 150.39 56.85 136.19Q56.85 122 58.34 119.5L63 118.2Z"
+              />
+            </svg>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         2. ABOUT SECTION (#about)
+         =================================================================== -->
+    <section id="about" class="rail-band rail-band--dark" data-section-label="// ABOUT" aria-labelledby="about-heading">
+      <div class="rail-grid">
+        <div class="rail-left">
+          <div class="rail-marker-sticky">
+            <span class="rail-marker">// ABOUT</span>
+            <span class="rail-marker-index">02</span>
+          </div>
+        </div>
+
+        <div class="rail-center">
+          <div class="mobile-section-bar">
+            <span>// ABOUT</span>
+            <span>02</span>
+          </div>
+
+          <div class="facet-surface about-intro-band">
+            <div class="about-box-head">
+              <div>
+                <h2 id="about-heading" class="display-title display-h2">About BROSEO</h2>
+              </div>
+              <span class="grid-dots-mark" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </span>
+            </div>
+
+            <p class="about-statement" data-word-scrub>
+              BROSEO Business Studio is an independent two-member studio building dependable websites, structured search visibility, and consistent local business presence.
+            </p>
+          </div>
+
+          <div class="about-portraits" data-about-reveal>
+            <figure class="about-member" data-media-reveal>
+              <div class="about-member-frame">
+                <img
+                  src="assets/images/team/member-01.webp"
+                  alt="BROSEO Business Studio member 01"
+                  width="786"
+                  height="1024"
+                  decoding="async"
+                >
+              </div>
+              <figcaption class="about-member-meta">
+                <span>Member 01</span>
+                <span>01 / 02</span>
+              </figcaption>
+            </figure>
+
+            <figure class="about-member" data-media-reveal>
+              <div class="about-member-frame">
+                <img
+                  src="assets/images/team/member-02.webp"
+                  alt="BROSEO Business Studio member 02"
+                  width="786"
+                  height="1024"
+                  decoding="async"
+                >
+              </div>
+              <figcaption class="about-member-meta">
+                <span>Member 02</span>
+                <span>02 / 02</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="rail-right"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         3. SERVICES SECTION (#services)
+         =================================================================== -->
+    <section id="services" class="rail-band rail-band--dark" data-section-label="// SERVICES" aria-labelledby="services-heading">
+      <div class="rail-grid">
+        <div class="rail-left">
+          <div class="rail-marker-sticky">
+            <span class="rail-marker">// SERVICES</span>
+            <span class="rail-marker-index">03</span>
+          </div>
+        </div>
+
+        <div class="rail-center">
+          <div class="mobile-section-bar">
+            <span>// SERVICES</span>
+            <span>03</span>
+          </div>
+
+          <div class="services-header facet-surface">
+            <div>
+              <h2 id="services-heading" class="display-title display-h2">Services</h2>
+            </div>
+            <span class="grid-dots-mark" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </span>
+          </div>
+
+          <div class="services-list">
+            <div class="services-progress-track" aria-hidden="true">
+              <div class="services-progress-fill" id="services-progress-fill"></div>
+            </div>
+            <!-- Service 01 -->
+            <article class="service-entry service-entry--full is-expanded" id="service-web" data-service-item="0">
+              <div class="service-entry-top">
+                <span class="service-entry-index">01</span>
+                <div class="service-entry-head">
+                  <h3 class="service-entry-title">Website Development &amp; Maintenance</h3>
+                  <p class="service-entry-desc">Website design, development, improvements and ongoing maintenance.</p>
+                </div>
+                <button
+                  type="button"
+                  class="service-toggle-btn"
+                  aria-expanded="true"
+                  aria-controls="service-panel-01"
+                  data-service-toggle
+                >
+                  <span class="service-toggle-label">Hide Details</span>
+                  <span class="service-toggle-icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+
+              <div class="service-media-wrap">
+                <div class="service-media-frame" data-media-reveal>
+                  <img
+                    src="assets/images/services/website-development.webp"
+                    alt="Website Development & Maintenance showcase"
+                    width="1024"
+                    height="1024"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+
+              <div class="service-details-panel" id="service-panel-01">
+                <div class="service-details-inner">
+                  <ul class="service-points-grid">
+                    <li class="service-point">
+                      <span class="service-point-index">01</span>
+                      <span>Custom responsive website design and frontend/CMS development</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">02</span>
+                      <span>Service pages, catalogue architecture, and inquiry form integration</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">03</span>
+                      <span>Security hardening, core updates, and performance optimization</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">04</span>
+                      <span>Ongoing content updates and structural improvements within agreed scope</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Service 02 -->
+            <article class="service-entry service-entry--inset-left" id="service-seo" data-service-item="1">
+              <div class="service-entry-top">
+                <span class="service-entry-index">02</span>
+                <div class="service-entry-head">
+                  <h3 class="service-entry-title">SEO, AI SEO &amp; GEO</h3>
+                  <p class="service-entry-desc">Search engine optimization, AI search visibility and Generative Engine Optimization.</p>
+                </div>
+                <button
+                  type="button"
+                  class="service-toggle-btn"
+                  aria-expanded="false"
+                  aria-controls="service-panel-02"
+                  data-service-toggle
+                >
+                  <span class="service-toggle-label">View Details</span>
+                  <span class="service-toggle-icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+
+              <div class="service-media-wrap">
+                <div class="service-media-frame" data-media-reveal>
+                  <img
+                    src="assets/images/services/seo-ai-geo.webp"
+                    alt="SEO, AI SEO & GEO showcase"
+                    width="1024"
+                    height="1024"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+
+              <div class="service-details-panel" id="service-panel-02">
+                <div class="service-details-inner">
+                  <ul class="service-points-grid">
+                    <li class="service-point">
+                      <span class="service-point-index">01</span>
+                      <span>Technical on-page SEO, heading hierarchy, and indexability setup</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">02</span>
+                      <span>Structured data (Schema.org JSON-LD) and entity clarity for AI parsers</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">03</span>
+                      <span>Generative Engine Optimization (GEO) for AI answer engine citations</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">04</span>
+                      <span>Local search keyword alignment and ongoing content refinement</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Service 03 -->
+            <article class="service-entry service-entry--inset-right" id="service-gbp" data-service-item="2">
+              <div class="service-entry-top">
+                <span class="service-entry-index">03</span>
+                <div class="service-entry-head">
+                  <h3 class="service-entry-title">Google Business Profile Management</h3>
+                  <p class="service-entry-desc">Business profile optimization, updates and ongoing management.</p>
+                </div>
+                <button
+                  type="button"
+                  class="service-toggle-btn"
+                  aria-expanded="false"
+                  aria-controls="service-panel-03"
+                  data-service-toggle
+                >
+                  <span class="service-toggle-label">View Details</span>
+                  <span class="service-toggle-icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+
+              <div class="service-media-wrap">
+                <div class="service-media-frame" data-media-reveal>
+                  <img
+                    src="assets/images/services/google-business-profile.webp"
+                    alt="Google Business Profile Management showcase"
+                    width="1024"
+                    height="1024"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+
+              <div class="service-details-panel" id="service-panel-03">
+                <div class="service-details-inner">
+                  <ul class="service-points-grid">
+                    <li class="service-point">
+                      <span class="service-point-index">01</span>
+                      <span>Primary and secondary category alignment, service lists, and attributes</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">02</span>
+                      <span>Accurate business hours, contact paths, and location verification support</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">03</span>
+                      <span>Scheduled profile updates, business posts, and real photograph uploads</span>
+                    </li>
+                    <li class="service-point">
+                      <span class="service-point-index">04</span>
+                      <span>Ongoing listing monitoring and information consistency with your website</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="rail-right">
+          <div class="services-rail-right">
+            <span class="mono-label">Services Index</span>
+            <p class="services-rail-note">Three focused services built for businesses seeking dependable web, search, and local visibility.</p>
+            <div class="services-pill-group">
+              <button type="button" class="pill-btn pill-btn--outline is-active" data-service-jump="0" aria-label="Jump to Website Development & Maintenance">
+                <span class="pill-btn-mask">
+                  <span class="pill-btn-track"><span>01</span><span>01</span></span>
+                </span>
+              </button>
+              <button type="button" class="pill-btn pill-btn--outline" data-service-jump="1" aria-label="Jump to SEO, AI SEO & GEO">
+                <span class="pill-btn-mask">
+                  <span class="pill-btn-track"><span>02</span><span>02</span></span>
+                </span>
+              </button>
+              <button type="button" class="pill-btn pill-btn--outline" data-service-jump="2" aria-label="Jump to Google Business Profile Management">
+                <span class="pill-btn-mask">
+                  <span class="pill-btn-track"><span>03</span><span>03</span></span>
+                </span>
+              </button>
+            </div>
+            <div class="services-rail-progress" aria-hidden="true">
+              <div class="services-rail-progress-fill" id="services-rail-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         4. PREVIOUS WORK SPOTLIGHT (#work)
+         =================================================================== -->
+    <section id="work" class="rail-band rail-band--light work-section" data-section-label="// WORK" aria-labelledby="work-heading">
+      <div class="rail-grid">
+        <div class="rail-left">
+          <div class="rail-marker-sticky">
+            <span class="rail-marker">// WORK</span>
+            <span class="rail-marker-index">04</span>
+          </div>
+        </div>
+
+        <div class="rail-center">
+          <div class="mobile-section-bar">
+            <span>// WORK</span>
+            <span>04</span>
+          </div>
+
+          <div class="work-header">
+            <h2 id="work-heading" class="display-title display-xl">Previous Work</h2>
+            <span class="grid-dots-mark" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </span>
+          </div>
+
+          <!-- Asymmetric Spotlight Stage -->
+          <div class="work-spotlight" id="work-spotlight" tabindex="0" aria-label="Previous work project spotlight">
+            <div class="work-spotlight-copy">
+              <span class="work-spotlight-counter" id="spotlight-counter">01 / 03</span>
+              <h3 class="work-spotlight-title" id="spotlight-title">Karur Interiors</h3>
+            </div>
+
+            <div class="work-spotlight-stage" data-reveal-clip>
+              <img
+                id="spotlight-img"
+                class="work-spotlight-img"
+                src="assets/images/work/karur-interiors.jpg"
+                alt="Karur Interiors website preview"
+                width="1024"
+                height="523"
+              >
+              <div class="work-spotlight-controls">
+                <button type="button" class="spotlight-arrow-btn" id="spotlight-prev" aria-label="Previous project">&larr;</button>
+                <button type="button" class="spotlight-arrow-btn" id="spotlight-next" aria-label="Next project">&rarr;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Real Supplied Projects Grid -->
+          <div class="work-selector-grid">
+            <button
+              type="button"
+              class="work-card is-active"
+              data-work-index="0"
+              data-work-title="Karur Interiors"
+              data-work-src="assets/images/work/karur-interiors.jpg"
+              data-work-alt="Karur Interiors website preview"
+              data-reveal
+            >
+              <div class="work-card-thumb">
+                <img src="assets/images/work/karur-interiors.jpg" alt="Karur Interiors" width="1024" height="523" loading="lazy">
+              </div>
+              <div class="work-card-meta">
+                <span class="work-card-index">01</span>
+                <span class="work-card-name">Karur Interiors</span>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              class="work-card"
+              data-work-index="1"
+              data-work-title="Dhanalakshmi Saw Mill"
+              data-work-src="assets/images/work/dhanalaxmi-sawmill.jpg"
+              data-work-alt="Dhanalakshmi Saw Mill website preview"
+              data-reveal
+              data-delay="1"
+            >
+              <div class="work-card-thumb">
+                <img src="assets/images/work/dhanalaxmi-sawmill.jpg" alt="Dhanalakshmi Saw Mill" width="1024" height="523" loading="lazy">
+              </div>
+              <div class="work-card-meta">
+                <span class="work-card-index">02</span>
+                <span class="work-card-name">Dhanalakshmi Saw Mill</span>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              class="work-card"
+              data-work-index="2"
+              data-work-title="Dhanalakshmi Door Industries"
+              data-work-src="assets/images/work/dhanalaxmi-doors.jpg"
+              data-work-alt="Dhanalakshmi Door Industries website preview"
+              data-reveal
+              data-delay="2"
+            >
+              <div class="work-card-thumb">
+                <img src="assets/images/work/dhanalaxmi-doors.jpg" alt="Dhanalakshmi Door Industries" width="1024" height="526" loading="lazy">
+              </div>
+              <div class="work-card-meta">
+                <span class="work-card-index">03</span>
+                <span class="work-card-name">Dhanalakshmi Door Industries</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="rail-right"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         5. ENGAGEMENT SECTION (#engagement)
+         =================================================================== -->
+    <section id="engagement" class="rail-band rail-band--dark" data-section-label="// ENGAGEMENT" aria-labelledby="engagement-heading">
+      <div class="rail-grid">
+        <div class="rail-left">
+          <div class="rail-marker-sticky">
+            <span class="rail-marker">// ENGAGEMENT</span>
+            <span class="rail-marker-index">05</span>
+          </div>
+        </div>
+
+        <div class="rail-center">
+          <div class="mobile-section-bar">
+            <span>// ENGAGEMENT</span>
+            <span>05</span>
+          </div>
+
+          <div class="engagement-stage facet-surface">
+            <div class="engagement-header" data-reveal>
+              <h2 id="engagement-heading" class="display-title display-h2">Start a Project<br>With BROSEO.</h2>
+            </div>
+
+            <div class="engagement-grid">
+              <div data-reveal>
+                <div class="contact-list">
+                  <div class="contact-row">
+                    <span class="contact-row-key">Email</span>
+                    <span class="contact-row-val">[To be provided]</span>
+                  </div>
+                  <div class="contact-row">
+                    <span class="contact-row-key">Phone</span>
+                    <span class="contact-row-val">[To be provided]</span>
+                  </div>
+                  <div class="contact-row">
+                    <span class="contact-row-key">Location</span>
+                    <span class="contact-row-val">[To be provided]</span>
+                  </div>
+                </div>
+                <p class="contact-placeholder-note">Direct contact details will be updated once supplied.</p>
+              </div>
+
+              <form class="enquiry-form" id="enquiry-form" novalidate data-reveal data-delay="1">
+                <div class="form-field">
+                  <label class="form-label" for="enquiry-name">Name</label>
+                  <input class="form-input" id="enquiry-name" name="name" type="text" placeholder="Your name" required>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="enquiry-email">Email</label>
+                  <input class="form-input" id="enquiry-email" name="email" type="email" placeholder="Your email address" required>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="enquiry-scope">Project Details</label>
+                  <textarea class="form-textarea" id="enquiry-scope" name="scope" placeholder="Share your website or project requirements" required></textarea>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="pill-btn pill-btn--light">
+                    <span class="pill-btn-mask">
+                      <span class="pill-btn-track">
+                        <span>Send Enquiry</span>
+                        <span>Send Enquiry</span>
+                      </span>
+                    </span>
+                    <span class="pill-btn-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+                  <span class="form-status" id="form-status" role="status" aria-live="polite"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="rail-right"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       6. FOOTER (OPEN FULL-WIDTH LAYOUT)
+       ===================================================================== -->
+  <footer class="site-footer" data-section-label="// FOOTER">
+    <div class="footer-inner">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h2 class="footer-col-title">Contact</h2>
+          <span class="footer-placeholder">Email: [To be provided]</span>
+          <span class="footer-placeholder">Phone: [To be provided]</span>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-col-title">Navigation</h2>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#work" class="footer-link">Previous Work</a></li>
+            <li><a href="#engagement" class="footer-link">Engagement</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-col-title">Social</h2>
+          <span class="footer-placeholder">Instagram: [To be provided]</span>
+          <span class="footer-placeholder">LinkedIn: [To be provided]</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 BROSEO</span>
+        <a href="#hero" class="back-to-top">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* ==========================================================================
+   BROSEO BUSINESS STUDIO — V1 ANIMATIONS & MOTION CHOREOGRAPHY
+   Restrained, cinematic, GPU-composited motion (CSS + IntersectionObserver + rAF)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO ENTRANCE REVEAL
+   -------------------------------------------------------------------------- */
+.hero-portrait-clip {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition: opacity 620ms var(--ease-editorial) 60ms,
+              transform 680ms var(--ease-editorial) 60ms;
+  will-change: opacity, transform;
+}
+
+.hero-rail-fade {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  transition: opacity 640ms var(--ease-editorial) 140ms,
+              transform 640ms var(--ease-editorial) 140ms;
+}
+
+body.is-hero-ready .hero-portrait-clip {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+body.is-hero-ready .hero-rail-fade {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* --------------------------------------------------------------------------
+   1B. UNIFIED ABOUT & SERVICES IMAGE REVEAL
+   -------------------------------------------------------------------------- */
+[data-media-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-media-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.about-portraits [data-media-reveal]:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+/* --------------------------------------------------------------------------
+   2. SCROLL-TRIGGERED EDITORIAL REVEALS
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition: opacity 760ms var(--ease-editorial),
+              transform 760ms var(--ease-editorial);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+[data-reveal-clip] {
+  overflow: hidden;
+}
+
+[data-reveal-clip] img {
+  clip-path: inset(0 0 100% 0);
+  transform: scale(1.05);
+  transition: clip-path 950ms var(--ease-editorial),
+              transform 1.2s var(--ease-editorial);
+  will-change: clip-path, transform;
+}
+
+[data-reveal-clip].is-revealed img {
+  clip-path: inset(0 0 0 0);
+  transform: scale(1);
+}
+
+[data-delay="1"] { transition-delay: 80ms; }
+[data-delay="2"] { transition-delay: 160ms; }
+[data-delay="3"] { transition-delay: 240ms; }
+
+/* --------------------------------------------------------------------------
+   3. ABOUT SCROLL-SCRUBBED WORD ILLUMINATION
+   -------------------------------------------------------------------------- */
+.scrub-word {
+  display: inline-block;
+  opacity: 0.22;
+  transition: opacity 160ms linear;
+  will-change: opacity;
+}
+
+/* --------------------------------------------------------------------------
+   4. WORK SPOTLIGHT CROSS-TRANSITION
+   -------------------------------------------------------------------------- */
+@keyframes spotlight-frame-in {
+  from {
+    opacity: 0.25;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spotlight-title-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.work-spotlight-img.is-switching {
+  animation: spotlight-frame-in 560ms var(--ease-editorial) forwards;
+}
+
+.work-spotlight-title.is-switching {
+  animation: spotlight-title-in 480ms var(--ease-editorial) forwards;
+}
+
+/* --------------------------------------------------------------------------
+   5. REDUCED MOTION ACCESSIBILITY
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal-clip] img {
+    clip-path: none !important;
+    transform: none !important;
+  }
+
+  .hero-portrait-clip,
+  .hero-rail-fade,
+  [data-media-reveal],
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .scrub-word {
+    opacity: 1 !important;
+  }
+}
